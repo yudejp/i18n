@@ -1,0 +1,50 @@
+#     _____  _                        _  __     _       _    _
+#    |   __|| |_  ___  ___  ___  ___ | ||  |   |_| ___ | |_ | |_
+#    |   __||  _|| -_||  _||   || .'|| ||  |__ | || . ||   ||  _|
+#    |_____||_|  |___||_|  |_|_||__,||_||_____||_||_  ||_|_||_|
+#                                                 |___|
+# 
+# Eternal Light is a plugin based from the Not Enough Item's mod light level overlays.
+# Red meaning hostile mobs can spawn at any time; yellow only during night and green
+# meaning that light levels are to high for hostile mobs to spawn.
+# 
+# PERMISSIONS
+#   eternallight.admin - Allows players to use /el
+#   eternallight.use   - Allows players to use /ll
+#   eternallight.mode  - Allows players to use /ll mode and /ll help. If they do not have this 
+#                        permission they will only be able to use the default display mode.
+# 
+# COMMANDS
+#   /el or /eternallight - (eternallight.admin) Displays admin command.
+#   /lightlevels or /ll  - (eternallight.use) Enables the light overlay.
+#   /lightlevels mode    - (eternallight.use) Toggles between active modes.
+# 
+# MODES
+#   SPAWNABLE  - Red and yellow areas shown.
+#   ALL        - Red, yellow and green areas shown.
+#   LIGHTLEVEL - All areas show like ALL mode but smoothed.
+# 
+# EXPLANATIONS
+#   radius           - Sets the radius players can see light levels in. It's advised to keep this
+#                      lower as it adds exponentially more load on the server the larger it is.
+#   update-rate      - Sets how long to wait between each display render of the particles in ticks (20 ticks a second). 
+#                      Increasing this will reduce load on the server as people use it.
+#   default-mode     - Default mode used for when players first toggle on the display.
+#   messages.enabled - If false players will not see activate, deactivate and change-mode messages.
+
+update-notifications: false
+scanner:
+  spherical: true
+  radius: 10
+  height: 3
+update-rate: 20
+default-mode: SPAWNABLE
+messages:
+  enabled: true
+  use-prefix: false
+  prefix: '&eスポーンチェッカー: '
+  activate: '&a有効'
+  deactivate: '&c無効'
+  change-mode: '&7%mode% モードに切り替えました。'
+  no-permission: '&cこのコマンドを実行する権限がありません。'
+  invalid-mode: '&c指定されたモードは正しくありません。'

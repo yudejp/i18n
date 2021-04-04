@@ -1,0 +1,41 @@
+# --------------------------------------------------
+# DeathCoordinates by Ajneb97 
+# If you find bugs, please contact with me:
+# https://www.spigotmc.org/resources/deathcoordinates-1-8-1-12.43318/
+# --------------------------------------------------
+Config:
+  new-version-reminder: false
+  lava_protection: true
+  void_protection: true
+  invulnerability_on_teleport:
+    enabled: true
+    time: 10
+  teleport-maxtime:
+    enabled: true
+    time: 300
+  teleport-cooldown: 15
+  enabled-worlds:
+  - world
+  - world_nether
+  - world_the_end
+  teleport_money_required: 0
+  console_notification:
+    enabled: false
+    message: '&cPlayer &e%player% &cjust died in: &8(&7%coord-x% %coord-y% %coord-z%'
+Messages:
+  death-message:
+  - '&7死亡した座標:'
+  - '&8(&7%coord-x% %coord-y% %coord-z%&8, &7%world% ワールド&8)'
+  death-message-extra: '&cこのメッセージをクリックすると、死亡場所にテレポートできます。'
+  no-died-recently: '&7直近の死亡場所はありません。'
+  incorrect-world: '&7このワールドではそのコマンドを実行できません。'
+  prefix: ''
+  plugin-reload: '&a設定ファイルを再読込しました。'
+  console-command: '&7そのコマンドを実行するには、プレイヤーでなければなりません。'
+  nopermissions: '&7このコマンドを実行する権限がありません。'
+  wrongcommand: '&7そのコマンドは存在しません。'
+  error-lava: '&7溶岩が付近にあるため、死亡場所にテレポートできません。'
+  error-void: '&7テレポートすると奈落に吸い込まれてしまうため、テレポートできません。'
+  error-money: '&7You need &a$%money% &7to teleport you to your death position'
+  teleporting-message: '&7テレポートします...'
+  error-cooldown: '&7再度テレポートするまで &c%time% &7秒待ってください。'
